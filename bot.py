@@ -35,7 +35,7 @@ def bot_message(message):
             back = types.KeyboardButton('Back')
             markup.add(item1, item2, back)
 
-            bot.send_message(message.chat.id,'Выберите нужную Вам валюту', reply_markup = markup)
+            bot.send_message(message.chat.id,'Choose the currency you need', reply_markup = markup)
 
         # Handler for the "Information" command
         elif message.text == 'Information':
@@ -71,7 +71,7 @@ def bot_message(message):
 
         # Sticker button
         elif message.text == 'Sticker':
-            sticker = open('static/sticker.webp', 'rb')
+            sticker = send('static/sticker.webp', 'rb')
             bot.send_sticker(message.chat.id, sticker)
 
 
