@@ -72,14 +72,11 @@ def bot_message(message):
 
         # Sticker button
         elif message.text == 'Sticker':
-            sticker = open('static/codecanyon-veiWKFDc-android-online-radio.zip', 'rb')
+            sticker = open('static/sticker.webp', 'rb')
             bot.send_sticker(message.chat.id, sticker)
             
          # File button getFile
-        elif message.text == 'File':
-            file_info = tb.get_file(file_id)
-            bot.send_message(message.chat.id, upload_files)
-            bot.send_sticker(message.chat.id, sticker)
+       elif message.text == 'File':
 
 
 # So that the bot does not turn off
