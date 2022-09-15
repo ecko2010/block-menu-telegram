@@ -71,7 +71,7 @@ def bot_message(message):
 
         # Sticker button
         elif message.text == 'Sticker':
-            sticker = send('static/sticker.webp', 'rb')
+            sticker = open('static/sticker.webp', 'rb')
             bot.send_sticker(message.chat.id, sticker)
 
 
