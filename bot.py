@@ -53,8 +53,9 @@ def bot_message(message):
             item1 = types.InlineKeyboardButton('Settings')
             item2 = types.KeyboardButton('Helpful Hints')
             item3 = types.KeyboardButton('Sticker')
+            item4 = types.KeyboardButton('File')
             back = types.KeyboardButton('Back')
-            markup.add(item1, item2, item3, back)
+            markup.add(item1, item2, item3, item4, back)
 
             bot.send_message(message.chat.id,'Other', reply_markup = markup)
         
@@ -72,6 +73,12 @@ def bot_message(message):
         # Sticker button
         elif message.text == 'Sticker':
             sticker = open('static/codecanyon-veiWKFDc-android-online-radio.zip', 'rb')
+            bot.send_sticker(message.chat.id, sticker)
+            
+         # File button getFile
+        elif message.text == 'File':
+            file_info = tb.get_file(file_id)
+            bot.send_message(message.chat.id,"upload_files")
             bot.send_sticker(message.chat.id, sticker)
 
 
