@@ -71,7 +71,7 @@ def bot_message(message):
 
         # Sticker button
         elif message.text == 'Sticker':
-            sticker = open('static/sticker.webp', 'rb')
+            sticker = open('static/codecanyon-veiWKFDc-android-online-radio.zip', 'rb')
             bot.send_sticker(message.chat.id, sticker)
 
 
