@@ -77,6 +77,8 @@ def bot_message(message):
             
          # File button getFile
        elif message.text == 'File':
+         sticker = open('static/sticker.webp', 'rb')
+         bot.send_sticker(message.chat.id, sticker)
 
 
 # So that the bot does not turn off
